@@ -28,7 +28,7 @@
 	/* responsive width for all devices */
 	body {
 		
-		max-width: 1200px;
+		max-width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
 		
@@ -41,6 +41,7 @@
 			max-width: 769px;
 			
 		}
+		
 
 	}
 
@@ -50,6 +51,39 @@
 		body {
 			
 			max-width: 480px;
+			
+		}
+		
+		.btn-group {
+			
+			display: none;
+			
+		}
+		
+		#navDiv {
+			
+			display: none;
+			
+		}
+		
+		.btn-group2 {
+			
+			display: flex;
+			
+		}
+		
+		#navDiv2 {
+			
+			display: flex;
+			
+		}
+		
+		.nav{
+			
+			padding: 5px 0px;
+			width: 50px;
+			height: 25px;
+			font-size: 12.5px;
 			
 		}
 
@@ -110,9 +144,9 @@
 			color: white;
 			text-align: center;
 			padding: 10px 0px;
-			width: 150px;
-			height: 60px;
-			font-size: 30px;
+			width: 100px;
+			height: 50px;
+			font-size: 25px;
 			transition-duration: 0.4s;
 			text-decoration: none;
 			background-color: #996938;
@@ -123,12 +157,26 @@
 		#navDiv {
 			
 			width: auto;
-			padding: 10px 45px 10px 10px;
+			padding: 5px 45px 5px 5px;
 			color: white;
 			margin: 30px 0px;
 			gap: 5px;
-			float: right;
 			text-align: center;
+			float: right;
+			display: flex;
+
+		}
+
+		#navDiv2 {
+			
+			width: auto;
+			padding: 5px 45px 5px 5px;
+			color: white;
+			margin: 30px 0px;
+			gap: 5px;
+			text-align: center;
+			float: left;
+			display: none;
 
 		}
 
@@ -137,7 +185,11 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
-		
+
+		.btn-group2 {
+			display: none;
+			flex-direction: column;
+		}
 
 	/* end nav */
 
