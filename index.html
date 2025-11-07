@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- reset zoom -->
+		<link rel="stylesheet" href="style.css"> <!-- style sheet -->
+		<link rel="icon" type="image/x-icon" href="logo/101bagellogo.png"> <!-- logo favicon -->
+		
+		<title>
+			
+			101 Bagels &amp; Subs Home
+		
+		</title>
+		
+	</head>
+	
+	<style>
+		
+		.featuredItem {
+			overflow: hidden; /* contain floated image */
+			margin-bottom: 10px;
+		}
+
+		/* Images inside featured items */
+		.featuredItem img {
+			width: calc(0.24*var(--maxWidth));
+			height: calc(0.16*var(--maxWidth));
+			border: calc(0.004*var(--maxWidth)) solid #664730;
+		}
+
+		/* Text content next to image */
+		.featuredTextContent {
+			display: inline-block;
+			vertical-align: top;
+			width: 74%;
+			height: calc(0.16*var(--maxWidth));
+		}
+		
+			
+		/* hero section */
+		#heroImage {
+
+			background-image: url("photos/home/heroImage.jpg");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 300px;
+			color: white;
+			text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+			font-size: calc(0.02*var(--maxWidth));
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 40px;
+			border: 3px solid white;
+
+		}
+		/* end hero */
+		
+		/* operating hours div */
+		#informationDiv {
+			
+			width: calc(0.28*var(--maxWidth));
+			height: auto;
+			text-align: center;
+			
+		}
+		
+		#days {
+			
+			font-weight: bold;
+			line-height: 30px;
+			float: left;
+			
+		}
+		
+		#times {
+			
+			line-height: 30px;
+			float: right;
+			
+		}
+		
+	</style>
+
+		<body>
+			
+			<!-- header + navigation -->
+			<div id="header">
+				
+				<!-- logo box -->
+				<div id="logo">
+					
+					<img src="logo/101bagellogo.png" width="92.06" height="100" alt="101bagellogo"/>
+				
+				</div> 
+				<!-- end of logo box -->
+				
+				<!-- Navigation -->
+				<div id="navDiv" class="btn-group">
+
+				  <!-- Hamburger icon for mobile -->
+				  <div id="menu-icon" onclick="toggleMenu()">☰</div>
+
+				  <!-- Actual nav links -->
+				  <div id="menu-links">
+					<a href="index.html" class="nav">Home</a>
+					<a href="menu.html" class="nav">Menu</a>
+					<a href="about.html" class="nav">About</a>
+					<a href="gallery.html" class="nav">Gallery</a>
+					<a href="contactInfo.html" class="nav">Contact</a>
+				  </div>
+
+				</div>
+				<!-- end Navigation -->
+			
+			</div>
+			
+			
+				<!-- hero section -->
+				<div id="heroImage">
+				
+					Discover 101 Bagels &amp; Subs in Oceanside, California, your destination for freshly baked bagels, hearty breakfast sandwiches, and flavorful subs. Using high-quality ingredients, we craft every bagel and sandwich with care, perfect for breakfast, lunch, or on-the-go. Whether dining in, taking out, or ordering online, 101 Bagels &amp; Subs offers delicious, fresh meals for locals and visitors alike. Enjoy the best bagels and subs in Oceanside today!
+					
+				</div>
+				<!-- end hero section -->
+			
+			<div id="content">
+			
+				
+				<!-- featured items -->
+				<div>
+				
+						<h1>
+							Featured
+						</h1>
+					
+						<!-- featured item #1 -->
+						<div class="featuredItem">
+							
+							<img src="photos/home/turkeyBaconSub.png" alt="Turkey Bacon Sub" class="float-left">
+							
+							<div class="featuredTextContent textContent" style="text-align: left;">
+								
+								<h3>Turkey Bacon Sub</h3>
+								
+								<p>The Turkey Bacon Sub combines tender turkey, crispy bacon, melted cheese, and fresh veggies on a warm toasted roll. Each bite delivers a perfect balance of smoky, juicy, and crunchy flavors, making it a satisfying choice for lunch or dinner.</p>
+								
+							</div>
+							
+						</div>
+						<!-- end -->
+							
+					
+						<!-- featured item #2 -->
+						<div class="featuredItem">
+							
+							<img src="photos/home/everythingBreakfastBagel.webp" alt="Everything Breakfast Bagel" class="float-right">
+							
+							<div class="featuredTextContent textContent" style="text-align: right;">
+								
+								<h3>Everything Bagel Breakfast Sandwich</h3>
+								
+								<p>The Everything Bagel Breakfast Sandwich* features a freshly baked everything bagel filled with scrambled eggs, melted cheese, and your choice of bacon, sausage, or ham. It’s a hearty, flavorful breakfast that’s perfect with coffee or juice to start your morning.</p>
+								
+							</div>
+							
+						</div>
+						<!-- end -->
+
+				
+				</div>
+				<!-- end featured items -->
+					
+			
+			</div>
+			
+		
+			<!-- hours + location -->
+				<div id="">
+			
+					<div id="informationDiv" class="textContent" style="float: left;">
+
+						<h3>
+
+							Operating Hours:
+
+						</h3>
+
+						<div id="days">
+
+							<p>
+
+									SUN:
+								<br>MON:
+								<br>TUE:
+								<br>WED:
+								<br>THU:
+								<br>FRI:
+								<br>SAT:
+
+							</p>
+
+						</div>
+
+						<div id="times">
+
+							<p>
+
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+								6 AM - 2 PM<br>
+
+							</p>
+
+						</div>
+
+					</div>
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.6409576664605!2d-117.3808961!3d33.1972889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6e36e0378a05%3A0x2e7ea5ebeed33058!2s101%20Bagels%20%26%20Subs!5e0!3m2!1sen!2sus!4v1762545255712!5m2!1sen!2sus" width="600" height="450" style="border:0; float: right;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			
+			
+				</div>
+			
+			
+			
+			
+		<!-- buffer -->
+		<div style="clear: both;">
+
+		</div>
+		<!-- buffer -->
+			
+			
+		<!-- copyright w/ automatically updating year -->
+		<div id="footer">
+
+			Copyright &copy; <script>document.write(new Date().getFullYear())</script> 101 Bagels and Subs
+
+		</div>
+		<!-- end copyright -->
+			
+			
+			<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu-links');
+  menu.classList.toggle('active');
+}
+</script>
+
+		</body>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>
