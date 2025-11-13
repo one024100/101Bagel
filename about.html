@@ -1,79 +1,227 @@
 <!doctype html>
 <html>
-	
+
 	<head>
-		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- reset zoom -->
 		<link rel="stylesheet" href="style.css"> <!-- style sheet -->
 		<link rel="icon" type="image/x-icon" href="logo/101bagellogo.png"> <!-- logo favicon -->
-		
+
 		<title>
-			
 			101 Bagels &amp; Subs About
-		
 		</title>
-		
 	</head>
 
-		<body>
-			
-			<!-- header + navigation -->
-			<div id="header">
-				
-				<!-- logo box -->
-				<div id="logo">
-					
-					<img src="logo/101bagellogo.png" width="92.06" height="100" alt="101bagellogo"/>
-				
-				</div> 
-				<!-- end of logo box -->
-				
-				<!-- Navigation -->
-				<div id="navDiv" class="btn-group">
+	<body>
 
-				  <!-- Hamburger icon for mobile -->
-				  <div id="menu-icon" onclick="toggleMenu()">☰</div>
+		<!-- header + navigation -->
+		<div id="header">
 
-				  <!-- Actual nav links -->
-				  <div id="menu-links">
+			<!-- logo box -->
+			<div id="logo">
+				<img src="logo/101bagellogo.png" alt="101bagellogo"/>
+			</div>
+			<!-- end of logo box -->
+
+			<!-- Navigation -->
+			<div id="navDiv" class="btn-group">
+
+				<!-- Hamburger icon for mobile -->
+				<div id="menu-icon" onclick="toggleMenu()">☰</div>
+
+				<!-- Actual nav links -->
+				<div id="menu-links">
 					<a href="index.html" class="nav">Home</a>
 					<a href="menu.html" class="nav">Menu</a>
 					<a href="about.html" class="nav">About</a>
 					<a href="gallery.html" class="nav">Gallery</a>
 					<a href="contactInfo.html" class="nav">Contact</a>
-				  </div>
-
 				</div>
-				<!-- end Navigation -->
-			
+
 			</div>
+			<!-- end Navigation -->
+
+		</div>
 			
 			<div id="content">
 			
-			Content Here
+				<h1>
+					About 101 Bagel
+				</h1>
+				
+				<img class="medImg float-left round-top-left" src="photos/about/inside101Bagel.webp" alt="">
+				
+				<!-- introduction -->
+				<div class="textContent round-top-right" style="height: calc(0.24*var(--maxWidth));">
+				
+					<h3>
+						How'd we start?
+					</h3>
+					
+					<p>
+						101 Bagels &amp; Subs began with a simple idea: to bring fresh, handcrafted food and a sense of community to Oceanside. What started as a small family shop soon became a local favorite known for its made-from-scratch bagels, sandwiches, and friendly atmosphere. The name “101” honors the iconic California highway—a symbol of connection and good food. From the start, every bagel has been boiled and baked the traditional way, while our sandwiches feature quality meats, cheeses, and locally sourced ingredients.
+					</p>
+
+					
+				</div>
+				<!-- end introduction -->
+					
+				<!-- goal -->
+				<div class="textContent round-bottom-right round-bottom-left">
+					<h3>
+						The Goal
+					</h3>
+					
+						<p>
+							At 101 Bagels &amp; Subs, our mission is to serve food that feels both familiar and memorable,
+							ensuring every visit to our shop is an experience that delights the senses and brings comfort
+							to our customers. We aim to create a space where people of all ages can enjoy simple,
+							high-quality meals made with care and attention to detail. Whether someone stops in for a
+							morning coffee, a quick lunch, a weekend breakfast, or a casual meeting with friends, we
+							want them to feel welcome, valued, and at home.
+						</p>
+
+						<p>
+							Beyond providing delicious food, our goal is to strengthen the sense of community within
+							Oceanside and the surrounding areas. Each bagel, sandwich, and beverage is prepared with the
+							intent of bringing people together over meals that are thoughtfully made, fresh, and
+							satisfying. We strive to offer not just sustenance, but also a sense of connection,
+							encouraging neighbors, families, and visitors to gather, share stories, and create lasting
+							memories at our shop.
+						</p>
+
+						<p>
+							We also focus on sustainability and supporting local suppliers whenever possible, sourcing
+							fresh ingredients from local farms and bakeries to ensure the highest quality and reduce our
+							environmental footprint. This commitment extends to both the taste and the ethics of our food,
+							reflecting our belief that good food should be responsibly sourced, wholesome, and accessible.
+						</p>
+
+						<p>
+							As we continue to grow, we remain committed to innovation without sacrificing authenticity.
+							New menu items, seasonal offerings, and creative specials are introduced thoughtfully to
+							maintain the consistency and quality that our patrons expect. Our goal is to balance tradition
+							with creativity, ensuring that while our food evolves with trends and customer preferences,
+							the essence of what makes 101 Bagels &amp; Subs special—care, quality, and community—remains
+							unchanged.
+						</p>
+
+						<p>
+							<strong>Ultimately, our purpose is to create more than just a place to eat: we want 101 Bagels &amp; Subs to be a destination where individuals feel a sense of belonging, enjoy exceptional food, and leave with a smile, looking forward to returning.</strong>
+						</p>
+
+				
+				</div>
+				<!-- end goal -->
+				
+				<!-- review column #1 -->
+				<div class="customerRev textContent roundAll">
+
+					<!-- stars -->
+					<div class="rating" data-rating="5"></div>
+					
+					<!-- name -->
+					<h3>
+
+						Michelle R.
+
+					</h3>
+					<!-- end name -->
+
+					<!-- review -->
+					<p>
+
+						Great and fast service! We ordered the open face Nova on an everything bagel which was perfect for me and my partner. The owner was kind and gave our pup a little treat. There are outdoor and indoor tables so we were able to enjoy our bagel with our pup in the outside patio.
+
+					</p>
+					<!-- end review -->
+
+				</div>
+				<!-- end of 1st column -->
+				
+				<!-- review column #2 -->
+				<div class="customerRev textContent roundAll">
+
+					<!-- stars -->
+					<div class="rating" data-rating="5"></div>
+					
+					<!-- name -->
+					<h3>
+
+						Victor C.
+
+					</h3>
+					<!-- end name -->
+
+					<!-- review -->
+					<p>
+
+						The grub hub guy took it to the wrong apartment but they made me another one and didn’t charge me. I got the 2 meat egg and cheese bagel with sprouts, onions and cream cheese and it was sooooooooo delicious. I got the strawberry banana smoothie with it. Totally cured my hangover.
+						
+					</p>
+					<!-- end review -->
+
+				</div>
+				<!-- end of 2nd column -->
+				
+				<!-- review column #3 -->
+				<div class="customerRev textContent roundAll">
+
+					<!-- stars -->
+					<div class="rating" data-rating="5"></div>
+					
+					<!-- name -->
+					<h3>
+
+						Michael B.
+
+					</h3>
+					<!-- end name -->
+
+					<!-- review -->
+					<p>
+
+						Had a couple bagels, Avocado toast on wheat, and a smoothie. Everybody raved about it. The food is great and tough to beat the prices.
+
+					</p>
+					<!-- end review -->
+
+				</div>
+				<!-- end of 3rd column -->
+				
 			
 			</div>
 			
 			
 			
+		<!-- buffer -->
+		<div style="clear: both;"></div>
+		<!-- buffer -->
+
 		<!-- copyright w/ automatically updating year -->
 		<div id="footer">
-
 			Copyright &copy; <script>document.write(new Date().getFullYear())</script> 101 Bagels and Subs
-
 		</div>
 		<!-- end copyright -->
-			
-			
-			<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu-links');
-  menu.classList.toggle('active');
-}
-</script>
 
-		</body>
+		<!-- menu -->
+		<script>
+			function toggleMenu() {
+				const menu = document.getElementById('menu-links');
+				menu.classList.toggle('active');
+			}
+		</script>
+		
+		<!-- star reader -->
+		<script>
+			document.querySelectorAll('.rating').forEach(star => {
+			  const rating = star.getAttribute('data-rating');
+			  star.style.setProperty('--rating', rating);
+			});
+		</script>
+
+	</body>
+
 
 	
 	
