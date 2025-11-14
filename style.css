@@ -131,18 +131,16 @@ p {
 /* featured items */
 .featuredItems {
     display: flex;
-    flex-direction: column; /* stack items vertically */
-    align-items: center;    /* center the .featuredItem divs horizontally */
+    flex-direction: column;
+    align-items: center;    
     width: 100%;
     text-align: center;
 }
 
-
-
 .featuredItem {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: calc(0.02 * var(--maxWidth));
+    margin-bottom: calc(0.005 * var(--maxWidth));
 }
 
 .featuredItem.reverse{
@@ -231,7 +229,7 @@ p {
 /* content */
 #content {
 	width: 100%;
-	padding: calc(0.01*var(--maxWidth)) calc(0.015*var(--maxWidth));
+	padding: 0px calc(0.015*var(--maxWidth)) calc(0.01*var(--maxWidth)) calc(0.015*var(--maxWidth));
 }
 
 /* logo */
