@@ -1,101 +1,279 @@
 <!doctype html>
 <html>
-	
-	<head>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- reset zoom -->
-		<link rel="stylesheet" href="style.css"> <!-- style sheet -->
-		<link rel="icon" type="image/x-icon" href="logo/101bagellogo.png"> <!-- logo favicon -->
-		
-		<title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="logo/101bagellogo.png">
+        <title>
+            101 Bagels &amp; Subs Menu
+        </title>
+        
+        <style>
+			p {
+				font-size: calc(0.018*var(--maxWidth));
+			}
+
+            .row,
+            .row > .column {
+                padding: 8px;
+            }
+
+            .column {
+                float: left;
+                width: 33.33%;
+                display: none;
+            }
 			
-			101 Bagels &amp; Subs Menu
-		
-		</title>
-		
-	</head>
+			.row {
+				display: flex;
+    			flex-wrap: wrap;
+    			justify-content: center; /* centers the columns horizontally */
+  			  	padding: 0px 3%;
+			}
 
-		<body>
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .show {
+                display: block;
+            }
+
+            .btn {
+                max-width: calc(0.15 * var(--maxWidth));
+                min-width: calc(0.1 * var(--maxWidth));
+                padding: calc(0.010 * var(--maxWidth));
+                text-align: center;
+                font-size: calc(0.02 * var(--maxWidth));
+                background-color: #664730;
+                border: calc(0.004 * var(--maxWidth)) solid #664730;
+                color: #fff1c7ff;
+                text-decoration: none;
+                transition-duration: 0.4s;
+                border-radius: calc(0.005 * var(--maxWidth));
+            }
+
+            .btn:hover {
+                background-color: #83654f;
+            }
+
+            .btn.active {
+                background-color: #fff1c7ff;
+                color: #664730;
+            }
 			
-			<!-- header + navigation -->
-			<div id="header">
-				
-				<!-- logo box -->
-				<div id="logo">
-					
-					<img src="logo/101bagellogo.png" width="92.06" height="100" alt="101bagellogo"/>
-				
-				</div> 
-				<!-- end of logo box -->
-				
-				<!-- Navigation -->
-				<div id="navDiv" class="btn-group">
+			.menuItem {
+				width: calc(0.3*var(--maxWidth));
+				height: calc(0.36*var(--maxWidth));
+				margin: calc(0.003*var(--maxWidth));
+				background-color: #fff1c7ff;
+				transition-duration: 0.3s;
+			}
+			
+			
+			:root {
+				/* hover shadow vars */
+				--vOffset: calc(0.015 * var(--maxWidth));
+				--blurRad: calc(0.013 * var(--maxWidth));
+			}			
+			
+			.menuItem:hover {
+				background-color: #FFF5D8;
+				transform: scale(1.01);
+				box-shadow: 0px var(--vOffset) var(--blurRad) 0px grey;
+			}
+			
+			.menuItemSBorder {
+				width: calc(0.36*var(--maxWidth));
+				height: calc(0.24*var(--maxWidth));
+				border: calc(0.002*var(--maxWidth)) solid #664730;
+				margin-top: calc(0.015*var(--maxWidth));
+			}
 
-				  <!-- Hamburger icon for mobile -->
-				  <div id="menu-icon" onclick="toggleMenu()">☰</div>
+			
+        </style>
+    </head>
 
-				  <!-- Actual nav links -->
-				  <div id="menu-links">
+    <body>
+
+        <!-- Header -->
+        <div id="header">
+
+            <div id="logo">
+                <img src="logo/101bagellogo.png" alt="101bagellogo"/>
+            </div>
+
+            <div id="navDiv" class="btn-group">
+
+                <div id="menu-icon" onclick="toggleMenu()">☰</div>
+
+				<!-- Actual nav links -->
+				<div id="menu-links">
 					<a href="index.html" class="nav">Home</a>
 					<a href="menu.html" class="nav">Menu</a>
 					<a href="about.html" class="nav">About</a>
-					<a href="gallery.html" class="nav">Gallery</a>
 					<a href="contactInfo.html" class="nav">Contact</a>
-				  </div>
-
 				</div>
-				<!-- end Navigation -->
-			
-			</div>
-			
-			<div id="content">
-			
-			Content Here
-			
-			</div>
-			
-			
-			
-		<!-- copyright w/ automatically updating year -->
-		<div id="footer">
 
-			Copyright &copy; <script>document.write(new Date().getFullYear())</script> 101 Bagels and Subs
+            </div>
+            
+        </div>
+        <!-- End Header -->
+        
+        <div id="content">
+        
+            <h1>
+                Menu    
+            </h1>
 
-		</div>
-		<!-- end copyright -->
-			
-			
-			<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu-links');
-  menu.classList.toggle('active');
-}
-</script>
+            <!-- Filter Buttons -->
+            <div id="myBtnContainer" style="text-align: center; margin-bottom: calc(0.03 * var(--maxWidth))">
+                <button class="btn active" onclick="filterSelection('column')">Show All</button>
+				<button class="btn" onclick="filterSelection('breakfast')">Breakfast</button>
+                <button class="btn" onclick="filterSelection('specials')">Specials</button>
+				<button class="btn" onclick="filterSelection('beverages')">Beverages</button>
+				
+            </div>
 
-		</body>
+            <!-- Portfolio/Grid -->
+            <div class="row centerHor">
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+               <!-- BREAKFAST ITEMS -->
+				<div class="column breakfast menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/breakfast/bagelwitheggandcheese.jpg" alt="classic breafkast" style="width:100%">
+                        <h3>Classic Breakfast Bagel</h3>
+                        <p>$5.99</p>
+                    </div>
+                </div>
+
+                <div class="column breakfast menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/breakfast/turkeymelt.jpg" alt="turkey melt" style="width:100%">
+                        <h3>Turkey Melt Bagel</h3>
+                        <p>$6.99</p>
+                    </div>
+                </div>
+
+                <div class="column breakfast menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/breakfast/fiesta.jpg" alt="fiesta" style="width:100%">
+                        <h3>Fiesta Bagel</h3>
+                        <p>$9.49</p>
+                    </div>
+				</div>
+				
+				<div class="column breakfast menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/breakfast/doubleSausage.png" alt="ultimate" style="width:100%">
+                        <h3>Double Sausage Burger</h3>
+                        <p>$12.49</p>
+                    </div>
+                </div>
+				
+                
+				<!-- SPECIALS -->
+				<div class="column specials menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/specials/deluxe.jpg" alt="deluxe" style="width:100%">
+                        <h3>Deluxe Bagel</h3>
+                        <p>$10.99</p>
+                    </div>
+                </div>
+				
+                <div class="column specials menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/specials/pizza.jpg" alt="pizza" style="width:100%">
+                        <h3>Pizza Bagel</h3>
+                        <p>$8.49</p>
+                    </div>
+                </div>
+
+                <div class="column specials menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/specials/ultimate.jpg" alt="ultimate" style="width:100%">
+                        <h3>Ultimate Bagel</h3>
+                        <p>$12.49</p>
+                    </div>
+                </div>
+				
+				
+				<!-- BEVERAGES  -->
+                <div class="column beverages menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/beverages/icedtea.jpg" alt="iced tea" style="width:100%">
+                        <h3>Iced Tea</h3>
+                        <p>$2.25</p>
+                    </div>
+                </div>
+
+                <div class="column beverages menuItem roundAll">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/beverages/coffee.jpg" alt="coffee" style="width:100%">
+                        <h3>Coffee</h3>
+                        <p>$2.99</p>
+                    </div>
+                </div>
+
+                <div class="column beverages menuItem roundAll middle">
+                    <div class="content">
+                        <img class="menuItemSBorder roundAll" src="photos/menu/beverages/kombucha.jpg" alt="kombucha" style="width:100%">
+                        <h3>Kombucha</h3>
+                        <p>$3.99</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Grid -->
+            
+        </div>
+        
+        <div style="clear: both;"></div>
+
+        <!-- Footer -->
+        <div id="footer">
+            Copyright &copy; <script>document.write(new Date().getFullYear())</script> 101 Bagels and Subs
+        </div>
+        <!-- End Footer -->
+
+        <!-- Navigation -->
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('menu-links');
+                menu.classList.toggle('active');
+            }
+			// end nav
+
+            // menu filter
+            filterSelection("column");
+
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                for (i = 0; i < x.length; i++) {
+                    x[i].className = x[i].className.replace(" show", "");
+                    if (x[i].className.indexOf(c) > -1) {
+                        x[i].className += " show";
+                    }
+                }
+            }
+
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+			// end menu filter
+        </script>
+        
+    </body>
+
 </html>

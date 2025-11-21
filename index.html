@@ -34,9 +34,9 @@
 					<a href="index.html" class="nav">Home</a>
 					<a href="menu.html" class="nav">Menu</a>
 					<a href="about.html" class="nav">About</a>
-					<a href="gallery.html" class="nav">Gallery</a>
 					<a href="contactInfo.html" class="nav">Contact</a>
 				</div>
+
 
 			</div>
 			<!-- end Navigation -->
@@ -49,7 +49,7 @@
 		</div>
 		<!-- end hero section -->
 
-		<div id="content">
+		<div class="content">
 
 			<!-- featured items -->
 			<div class="featuredItems">
@@ -89,6 +89,8 @@
 				</div>
 				<!-- end -->
 				
+				<a href="menu.html" class="button">See the rest of our collection here!</a>
+				
 			</div>
 
 			</div>
@@ -96,8 +98,12 @@
 			
 
 			<!-- hours + location -->
+				<h2 class="content">
+					Extra Information &amp; FAQs
+				</h2>
+			
 			<div id="hourNLoc">
-
+				
 				<div id="informationDiv" class="textContent roundAll">
 
 					<h3>
@@ -112,13 +118,13 @@
 
 					<div id="times">
 						<p>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
-							6 AM - 2 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
+							6:30 AM - 2:30 PM<br>
 						</p>
 					</div>
 
@@ -127,8 +133,62 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.6409576664605!2d-117.3808961!3d33.1972889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6e36e0378a05%3A0x2e7ea5ebeed33058!2s101%20Bagels%20%26%20Subs!5e0!3m2!1sen!2sus!4v1762545255712!5m2!1sen!2sus" style="border:0; width: calc(0.6*var(--maxWidth)); height: calc(0.3*var(--maxWidth));" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="roundAll"></iframe>
 
 			</div>
+		
+			<!-- FAQs -->
+			<div class="content" style="margin-top: calc(0.02*var(--maxWidth))">
 
-		</div>
+				<div class="accordion">
+
+					<div class="accordion-item">
+						<button class="accordion-header">What are your hours of operation?</button>
+						<div class="accordion-content">
+							<p>
+								We’re open seven days a week from 6:30 AM to 2:30 PM. Holiday hours may vary, so check our social media for updates.
+							</p>
+						</div>
+					</div>
+
+
+					<div class="accordion-item">
+						<button class="accordion-header">Do you offer gluten-free or vegan options?</button>
+						<div class="accordion-content">
+							<p>
+								While we don’t offer gluten-free bagels at this time, we do have vegan-friendly spreads and sandwich options. Ask our staff for suggestions!
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<button class="accordion-header">Do you offer gluten-free or vegan options?</button>
+						<div class="accordion-content">
+							<p>
+								While we don’t offer gluten-free bagels at this time, we do have vegan-friendly spreads and sandwich options. Ask our staff for suggestions!
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<button class="accordion-header">Can I place a large order for an event or office meeting?</button>
+						<div class="accordion-content">
+							<p>
+								Absolutely. We offer catering trays, bulk bagel orders, and sandwich platters. Please place large orders at least 24–48 hours in advance.
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<button class="accordion-header">Do you have outdoor seating or dine-in options?</button>
+						<div class="accordion-content">
+							<p>
+								Yes, we offer both indoor and outdoor seating, and all items are available for dine-in or take-out.
+							</p>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			<!-- end FAQs -->
+
 
 		<!-- buffer -->
 		<div style="clear: both;"></div>
@@ -140,12 +200,40 @@
 		</div>
 		<!-- end copyright -->
 
+		
+		<!-- nav menu dropdown -->
 		<script>
 			function toggleMenu() {
 				const menu = document.getElementById('menu-links');
 				menu.classList.toggle('active');
 			}
 		</script>
+		<!-- end dropdown -->
+	
+		<!-- accordion -->
+		<script>
+				document.querySelectorAll('.accordion-header').forEach(button => {
+					button.addEventListener('click', () => {
+
+						const content = button.nextElementSibling;
+
+						// Close if already open
+						if (content.style.maxHeight) {
+							content.style.maxHeight = null;
+						} else {
+							// Close all others
+							document.querySelectorAll('.accordion-content').forEach(item => {
+								item.style.maxHeight = null;
+							});
+							// Open selected
+							content.style.maxHeight = content.scrollHeight + "px";
+						}
+
+					});
+				});
+			</script>
+			<!-- end accordion -->
+
 
 	</body>
 
